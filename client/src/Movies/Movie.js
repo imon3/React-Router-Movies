@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard';
+import { Link } from 'react-router-dom';
 
 
 export default class Movie extends Component {
@@ -9,7 +10,6 @@ export default class Movie extends Component {
     this.state = {
       movie: null
     };
-
   }
 
   componentDidMount() {
@@ -46,10 +46,10 @@ export default class Movie extends Component {
     }
 
     // const { title, director, metascore, stars } = this.state.movie;
-
+    console.log(this.state.movie)
     return (
       <div className="save-wrapper">
-        <MovieCard saveMovie={this.saveMovie} movie={this.state.movie} />
+        <MovieCard movie={this.state.movie} />
         {/* <div className="movie-card">
           <h2>{title}</h2>
           <div className="movie-director">
