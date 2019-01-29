@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 export default class SavedList extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      list: []
+    }
+    console.log(props)
   }
 
   render() {
